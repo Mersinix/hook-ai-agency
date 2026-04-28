@@ -1,0 +1,40 @@
+{
+  "name": "Hook",
+  "private": true,
+  "packageManager": "npm@11.8.0",
+  "scripts": {
+    "build": "turbo run build --filter=web --filter=@apps/api",
+    "dev": "turbo run dev",
+    "dev:web": "npm run dev --workspace=web",
+    "dev:api": "npm run dev --workspace=@apps/api",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types",
+    "build:web": "npm run build --workspace=web",
+    "build:api": "npm run build --workspace=@apps/api",
+    "start:web": "npm run start --workspace=web",
+    "start:api": "npm run start:prod --workspace=@apps/api",
+    "start:prod": "npm run build && npm run start:api"
+  },
+  "devDependencies": {
+    "prettier": "^3.7.4",
+    "turbo": "^2.9.6",
+    "typescript": "5.9.2"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "dependencies": {
+    "confbox": "^0.2.4",
+    "effect": "^3.21.2",
+    "fast-check": "^4.7.0",
+    "pkg-types": "^2.3.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "overrides": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}
