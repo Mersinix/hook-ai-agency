@@ -1,0 +1,64 @@
+import * as THREE from "three";
+
+type StarfieldOptions = {
+  numStars?: number;
+};
+
+export default function getStarfield({ numStars = 500 }: StarfieldOptions = {}) {
+  function randomSpherePoint() {
+    const radius = Math.random() * 25 + 25;
+    const u = Math.random();
+    const v = Math.random();
+
+    const theta = 2 * Math.PI * u;
+    const phi = Math.acos(2 * v - 1);
+
+    const x = radius * Math.sin(phi) * Math.cos(theta);
+    const y = radius * Math.sin(phi) * Math.sin(theta);
+    const z = radius * Math.cos(phi);
+
+    return {
+      pos: new THREE.Vector3(x, y, z),
+      hue: 0.6,
+      minDist: radius,
+    };
+  }
+
+  const verts: number[] = [];
+  const colors: number[] = [];
+
+  for (let i = 0; i < numStars; i++) {
+    const { pos, hue } = randomSpherePoint();
+
+    const col = new THREE.Color().setHSL(hue, 0.2, Math.random());
+
+    verts.push(pos.x, pos.y, pos.z);
+    colors.push(col.r, col.g, col.b);
+  }
+
+  const geometry = new THREE.BufferGeometry();
+  geometry.setAttribute(
+    "position",
+    new THREE.Float32BufferAttribute(verts, 3)
+  );
+  geometry.setAttribute(
+    "color",
+    new THREE.Float32BufferAttribute(colors, 3)
+  );
+
+  const texture = new THREE.TextureLoader().load(
+    "/textures/stars/circle.png" // 👈 IMPORTANT (public folder)
+  );
+
+  const material = new THREE.PointsMaterial({
+    size: 0.2,
+    vertexColors: true,
+    map: texture,
+    transparent: true,
+    depthWrite: false, // ✨ improves glow look
+  });
+
+  const points = new THREE.Points(geometry, material);
+
+  return points;
+}

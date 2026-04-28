@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-text font-sans antialiased;
+  }
+
+  * {
+    @apply box-border;
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(17, 24, 39, 0.55);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .glass-subtle {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-white/10 border border-white/15 text-white font-medium rounded-xl px-6 py-3 transition-all duration-200 hover:bg-white/15 hover:border-white/25 active:scale-95;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 bg-accent text-white font-semibold rounded-xl px-6 py-3 transition-all duration-200 active:scale-95;
+    box-shadow: 0 0 30px rgba(124, 58, 237, 0.35);
+  }
+
+  .btn-accent:hover {
+    background-color: #6D28D9;
+    box-shadow: 0 0 45px rgba(124, 58, 237, 0.55);
+  }
+
+  .section-label {
+    @apply inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-accent bg-accent/10 border border-accent/20 rounded-full px-4 py-1.5;
+  }
+
+  .section-heading {
+    @apply text-4xl md:text-5xl font-bold tracking-tight leading-tight;
+  }
+
+  .section-subtext {
+    @apply text-text-muted text-lg leading-relaxed max-w-2xl mx-auto;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-sm;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent to-indigo-400 bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .glow-accent {
+    box-shadow: 0 0 50px rgba(124, 58, 237, 0.25);
+  }
+
+  .shadow-glow-sm {
+    box-shadow: 0 0 30px rgba(124, 58, 237, 0.2), 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}

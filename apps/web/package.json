@@ -1,0 +1,32 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 5000 -H 0.0.0.0",
+    "build": "next build",
+    "start": "next start -p 5000 -H 0.0.0.0",
+    "lint": "eslint --max-warnings 0",
+    "check-types": "next typegen && tsc --noEmit"
+  },
+  "dependencies": {
+    "@repo/ui": "*",
+    "next": "^15.0.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "three": "^0.184.0"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@types/node": "^22.15.3",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "@types/three": "^0.184.0",
+    "autoprefixer": "^10.5.0",
+    "eslint": "^9.39.1",
+    "postcss": "^8.5.10",
+    "tailwindcss": "^3.4.19",
+    "typescript": "5.9.2"
+  }
+}
