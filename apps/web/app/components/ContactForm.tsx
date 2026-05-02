@@ -159,7 +159,7 @@ export default function ContactForm() {
           </div>
 
           {/* Right: Form */}
-          <div className="glass rounded-3xl p-8 border border-white/8">
+          <div className="glass rounded-3xl p-8 border border-yellow-300/30">
             {success ? (
               <div className="text-center py-10">
                 <div className="w-16 h-16 rounded-full bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center mx-auto mb-4">

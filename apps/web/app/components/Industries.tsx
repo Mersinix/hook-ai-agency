@@ -150,7 +150,7 @@ export default function Industries() {
                 key={ind.id}
                 onMouseEnter={() => setHovered(ind.id)}
                 onMouseLeave={() => setHovered(null)}
-                className={`group relative rounded-3xl border border-white/8 p-7 cursor-default transition-all duration-300 ${ind.border} ${ind.glow} hover:-translate-y-1 overflow-hidden`}
+                className={`group relative rounded-3xl border border-yellow-300/30 p-7 cursor-default transition-all duration-300 ${ind.border} ${ind.glow} hover:-translate-y-1 overflow-hidden`}
                 style={{ background: "rgba(13,20,36,0.7)", backdropFilter: "blur(12px)" }}
               >
                 {/* Gradient bg layer */}
@@ -211,7 +211,7 @@ export default function Industries() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-16 relative rounded-3xl border border-white/8 p-10 text-center overflow-hidden"
+        <div className="mt-16 relative rounded-3xl border border-yellow-300/30 p-10 text-center overflow-hidden"
           style={{ background: "rgba(13,20,36,0.7)", backdropFilter: "blur(12px)" }}>
           <div className="absolute inset-0 bg-gradient-to-r from-accent/8 via-transparent to-indigo-500/8 pointer-events-none" />
           <div className="relative">

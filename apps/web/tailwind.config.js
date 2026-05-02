@@ -46,6 +46,9 @@ export default {
         "hero-glow":
           "radial-gradient(ellipse 80% 50% at 50% -20%, rgba(124,58,237,0.3), transparent)",
       },
+        animation: {
+    'spin-slow': 'spin 5s linear infinite',
+  },
     },
   },
   plugins: [],

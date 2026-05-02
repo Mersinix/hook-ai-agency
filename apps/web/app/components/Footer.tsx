@@ -18,7 +18,7 @@ const footerLinks = {
   Contact: [
     { label: "Book a Strategy Call", href: "#ready" },
     { label: "Send a Message", href: "#contact" },
-    { label: "hello@hook.agency", href: "mailto:hello@hook.agency" },
+    { label: "hook.agency@outlook.fr", href: "mailto:hook.agency@outlook.fr" },
   ],
 };
 
@@ -162,7 +162,7 @@ export default function Footer() {
                     key={s.label}
                     href={s.href}
                     aria-label={s.label}
-                    className={`w-9 h-9 rounded-xl bg-white/4 border border-white/8 flex items-center justify-center text-text-muted transition-all duration-200 ${s.hoverColor}`}
+                    className={`w-9 h-9 rounded-xl bg-white/4 border border-yellow-300/30 flex items-center justify-center text-text-muted transition-all duration-200 ${s.hoverColor}`}
                   >
                     {s.icon}
                   </a>
@@ -170,7 +170,7 @@ export default function Footer() {
               </div>
 
               {/* Availability badge */}
-              <div className="mt-6 inline-flex items-center gap-2 bg-emerald-500/8 border border-emerald-500/18 rounded-full px-3 py-1.5">
+              <div className="mt-6 inline-flex items-center gap-2 bg-emerald-500/8 border border-yellow-300/30 rounded-full px-3 py-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                 <span className="text-[11px] font-medium text-emerald-400">Accepting new clients</span>
               </div>

@@ -59,7 +59,7 @@ export default function FAQ() {
                 className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
                   isOpen
                     ? "border-accent/30 bg-accent/5"
-                    : "border-white/6 glass-subtle hover:border-white/12"
+                    : "border-yellow-300/30 glass-subtle hover:border-white/12"
                 }`}
               >
                 <button

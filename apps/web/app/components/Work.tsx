@@ -148,7 +148,7 @@ const allSolutions: Solution[] = [
 const featured = allSolutions.slice(0, 6);
 
 const STATS_RIBBON = [
-  { value: "$$0.5M+", label: "Revenue Generated" },
+  { value: "$0.5M+", label: "Revenue Generated" },
   { value: "2K+", label: "Leads Driven" },
   { value: "80+", label: "Automations Deployed" },
   { value: "40+", label: "Solutions Delivered" },
@@ -162,7 +162,7 @@ function FeaturedCard({ s, index }: { s: Solution; index: number }) {
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className={`group relative rounded-3xl border border-white/8 overflow-hidden transition-all duration-300 hover:border-white/18 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(0,0,0,0.5)] ${
+      className={`group relative rounded-3xl border border-yellow-300/30 overflow-hidden transition-all duration-300 hover:border-white/18 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(0,0,0,0.5)] ${
         isLarge ? "md:row-span-1" : ""
       }`}
       style={{ background: "rgba(13,20,36,0.8)", backdropFilter: "blur(12px)" }}
@@ -194,7 +194,7 @@ function FeaturedCard({ s, index }: { s: Solution; index: number }) {
         </div>
 
         {/* Service badge */}
-        <div className="absolute top-4 left-4">
+        <div className="absolute top-4 left-4 ">
           <span
             className={`text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full border ${SERVICE_BADGE[s.service]}`}
           >
@@ -223,7 +223,7 @@ function FeaturedCard({ s, index }: { s: Solution; index: number }) {
           {s.stack.map((t) => (
             <span
               key={t}
-              className="text-xs text-text-subtle bg-white/4 border border-white/6 rounded-full px-2.5 py-0.5"
+              className="text-xs text-text-subtle bg-white/4 border border-yellow-300/30 rounded-full px-2.5 py-0.5"
             >
               {t}
             </span>
@@ -273,7 +273,7 @@ export default function Work() {
             {STATS_RIBBON.map((stat) => (
               <div
                 key={stat.label}
-                className="glass-subtle rounded-2xl border border-white/6 px-5 py-4 text-center"
+                className="glass-subtle rounded-2xl border border-yellow-300/30 px-5 py-4 text-center"
               >
                 <div className="text-2xl font-bold gradient-text mb-1">{stat.value}</div>
                 <div className="text-xs text-text-muted">{stat.label}</div>
@@ -295,10 +295,10 @@ export default function Work() {
             </p>
             <button
               onClick={() => setModalOpen(true)}
-              className="group flex items-center gap-3 glass-subtle border border-white/10 hover:border-accent/40 px-8 py-4 rounded-2xl text-sm font-semibold text-white hover:text-accent transition-all duration-300 hover:shadow-glow-sm"
+              className="group flex items-center gap-3 glass-subtle border border-yellow-300/30 hover:border-accent/40 px-8 py-4 rounded-2xl text-sm font-semibold text-white hover:text-accent transition-all duration-300 hover:shadow-glow-sm"
             >
               <span>View All Solutions</span>
-              <span className="w-7 h-7 rounded-full bg-accent/10 border border-accent/25 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+              <span className="w-7 h-7 rounded-full bg-accent/10 border border-yellow-300/30 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
                 <svg className="w-3.5 h-3.5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                 </svg>
@@ -310,7 +310,7 @@ export default function Work() {
           </div>
 
           {/* Bottom CTA */}
-          <div className="mt-16 rounded-3xl border border-white/8 overflow-hidden relative"
+          <div className="mt-16 rounded-3xl border border-yellow-300/30 overflow-hidden relative"
             style={{ background: "rgba(13,20,36,0.7)", backdropFilter: "blur(12px)" }}>
             <div className="absolute inset-0 bg-gradient-to-r from-accent/8 via-transparent to-indigo-500/8" />
             <div className="relative p-10 text-center">

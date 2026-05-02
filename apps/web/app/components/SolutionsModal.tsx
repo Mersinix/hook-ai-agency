@@ -42,7 +42,7 @@ const SORT_ORDER: Record<string, string[]> = {
 function ModalCard({ s }: { s: Solution }) {
   return (
     <div
-      className="group relative rounded-2xl border border-white/8 overflow-hidden transition-all duration-300 hover:border-white/18 hover:-translate-y-0.5 hover:shadow-[0_12px_40px_rgba(0,0,0,0.5)]"
+      className="group relative rounded-2xl border border-yellow-300/30 overflow-hidden transition-all duration-300 hover:border-white/18 hover:-translate-y-0.5 hover:shadow-[0_12px_40px_rgba(0,0,0,0.5)]"
       style={{ background: "rgba(16,24,42,0.85)", backdropFilter: "blur(8px)" }}
     >
       {/* Visual area */}
@@ -83,7 +83,7 @@ function ModalCard({ s }: { s: Solution }) {
         <p className="text-[11px] text-text-muted leading-relaxed mb-3 line-clamp-2">{s.desc}</p>
         <div className="flex flex-wrap gap-1">
           {s.stack.map((t) => (
-            <span key={t} className="text-[10px] text-text-subtle bg-white/4 border border-white/6 rounded-full px-2 py-0.5">
+            <span key={t} className="text-[10px] text-text-subtle bg-white/4 border border-yellow-300/30 rounded-full px-2 py-0.5">
               {t}
             </span>
           ))}
@@ -212,7 +212,7 @@ export default function SolutionsModal({
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search solutions, stacks, industries…"
-                className="w-full bg-white/5 border border-white/8 rounded-xl pl-9 pr-3 py-2 text-xs text-white placeholder:text-text-subtle focus:outline-none focus:border-accent/40 focus:bg-white/8 transition-all"
+                className="w-full bg-white/5 border border-yellow-300/30 rounded-xl pl-9 pr-3 py-2 text-xs text-white placeholder:text-text-subtle focus:outline-none focus:border-accent/40 focus:bg-white/8 transition-all"
               />
               {search && (
                 <button
@@ -227,7 +227,7 @@ export default function SolutionsModal({
             </div>
 
             {/* Sort */}
-            <div className="flex-shrink-0 flex items-center gap-1 bg-white/4 border border-white/8 rounded-xl px-1 py-1">
+            <div className="flex-shrink-0 flex items-center gap-1 bg-white/4 border border-yellow-300/30 rounded-xl px-1 py-1">
               {SORT_OPTIONS.map((o) => (
                 <button
                   key={o}
@@ -247,7 +247,7 @@ export default function SolutionsModal({
             <button
               onClick={onClose}
               aria-label="Close"
-              className="flex-shrink-0 w-8 h-8 rounded-xl bg-white/5 border border-white/8 flex items-center justify-center text-text-muted hover:text-white hover:bg-white/10 transition-all"
+              className="flex-shrink-0 w-8 h-8 rounded-xl bg-white/5 border border-yellow-300/30 flex items-center justify-center text-text-muted hover:text-white hover:bg-white/10 transition-all"
             >
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
@@ -270,7 +270,7 @@ export default function SolutionsModal({
                         ? f === "All"
                           ? "bg-white/15 border-white/30 text-white"
                           : SERVICE_COLORS[f]
-                        : "border-white/8 text-text-muted hover:border-white/18 hover:text-white"
+                        : "border-yellow-300/30 text-text-muted hover:border-white/18 hover:text-white"
                     }`}
                   >
                     {f}
@@ -291,7 +291,7 @@ export default function SolutionsModal({
                     className={`text-[10px] font-semibold px-2.5 py-1 rounded-full border whitespace-nowrap transition-all duration-150 flex-shrink-0 ${
                       industryFilter === f
                         ? "bg-accent/15 border-accent/35 text-accent"
-                        : "border-white/8 text-text-muted hover:border-white/18 hover:text-white"
+                        : "border-yellow-300/30 text-text-muted hover:border-white/18 hover:text-white"
                     }`}
                   >
                     {f}
@@ -343,7 +343,7 @@ export default function SolutionsModal({
             {hasActiveFilters && (
               <button
                 onClick={clearFilters}
-                className="flex items-center gap-1 text-[10px] text-text-muted border border-white/8 rounded-full px-2.5 py-1 hover:border-white/20 hover:text-white transition-all"
+                className="flex items-center gap-1 text-[10px] text-text-muted border border-yellow-300/30 rounded-full px-2.5 py-1 hover:border-white/20 hover:text-white transition-all"
               >
                 <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />

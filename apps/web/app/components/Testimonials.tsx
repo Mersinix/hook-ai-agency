@@ -94,7 +94,7 @@ export default function Testimonials() {
           {testimonials.map((t) => (
             <div
               key={t.author}
-              className="break-inside-avoid glass rounded-2xl p-6 border border-white/6 hover:border-accent/20 transition-all duration-300 group hover:-translate-y-0.5"
+              className="break-inside-avoid glass rounded-2xl p-6 border border-yellow-300/30 hover:border-accent/20 transition-all duration-300 group hover:-translate-y-0.5"
             >
               <Stars count={t.stars} />
 

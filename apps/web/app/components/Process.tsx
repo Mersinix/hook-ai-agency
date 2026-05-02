@@ -67,7 +67,7 @@ export default function Process() {
                 <div className="hidden lg:block absolute top-14 left-full w-full h-px bg-gradient-to-r from-accent/30 to-transparent -translate-y-1/2 z-0"/>
               )}
 
-              <div className="relative z-10 h-full rounded-3xl glass-subtle border border-white/8 p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/30 hover:shadow-glow-sm">
+              <div className="relative z-10 h-full rounded-3xl glass-subtle border border-yellow-300/30 p-8 transition-all duration-500 hover:-translate-y-2 hover:border-accent/30 hover:shadow-glow-sm">
 
                 {/* Top */}
                 <div className="flex justify-between items-center mb-8">

@@ -143,10 +143,10 @@ export default function Services() {
               <button
                 key={cat.id}
                 onClick={() => setActive(cat.id)}
-                className={`flex items-center gap-2.5 px-5 py-2.5 rounded-xl border text-sm font-semibold transition-all duration-200 ${
+                className={`flex items-center gap-2.5 px-5 py-2.5 rounded-xl border border-yellow-400/30 text-sm font-semibold transition-all duration-200 ${
                   isActive
                     ? `${cat.tagColor} border-current bg-current/10 scale-105 shadow-lg`
-                    : "text-text-muted border-white/8 hover:border-white/16 hover:text-white"
+                    : "text-text-muted border-yellow-300/30 hover:border-white/16 hover:text-white"
                 }`}
               >
                 <span className={`w-1.5 h-1.5 rounded-full ${isActive ? (a?.dot ?? "bg-white/30") : "bg-white/30"}`} />
@@ -162,7 +162,7 @@ export default function Services() {
         {/* Content panel */}
         <div className="grid lg:grid-cols-5 gap-6">
           {/* Left: Category overview */}
-          <div className="lg:col-span-2 glass rounded-3xl border border-white/8 p-8 flex flex-col justify-between">
+          <div className="lg:col-span-2 glass rounded-3xl border border-yellow-300/30 p-8 flex flex-col justify-between">
             <div>
               <div className={`inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full border mb-6 ${current.tagColor}`}>
                 {current.icon}
@@ -201,7 +201,7 @@ export default function Services() {
             {current.services.map((service, i) => (
               <div
                 key={service.name}
-                className={`group glass-subtle rounded-2xl border border-white/6 p-5 transition-all duration-300 ${accent.border} ${accent.glow} hover:-translate-y-0.5 ${
+                className={`group glass-subtle rounded-2xl border border-yellow-300/30 p-5 transition-all duration-300 ${accent.border} ${accent.glow} hover:-translate-y-0.5 ${
                   i === current.services.length - 1 && current.services.length % 2 !== 0
                     ? "sm:col-span-2"
                     : ""
@@ -220,7 +220,7 @@ export default function Services() {
         </div>
 
         {/* Bottom methodology row */}
-        <div className="mt-12 glass-subtle rounded-2xl border border-white/6 p-5 flex flex-wrap items-center justify-between gap-4">
+        <div className="mt-12 glass-subtle rounded-2xl border border-yellow-300/30 p-5 flex flex-wrap items-center justify-between gap-4">
           <div className="flex flex-wrap gap-2">
             {["Acquire", "Create", "Build", "Automate"].map((step, i) => (
               <div key={step} className="flex items-center gap-2">
