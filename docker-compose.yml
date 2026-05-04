@@ -25,6 +25,8 @@ services:
       NODE_ENV: production
       PORT: 3001
       DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-hook}?schema=public
+    ports:
+      - "3001:3001"
     depends_on:
       postgres:
         condition: service_healthy
@@ -54,8 +56,10 @@ services:
       - api
     ports:
       - "80:80"
+      - "443:443"
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
-
+      - /var/www/hook/certbot/conf:/etc/letsencrypt
+      - /var/www/hook/certbot/www:/var/www/certbot
 volumes:
   postgres_data:

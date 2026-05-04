@@ -12,3 +12,6 @@ yarn-error.log*
 pnpm-debug.log*
 coverage
 *.local
+certbot
+certbot/
+certbot/**
