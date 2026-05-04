@@ -54,16 +54,20 @@ export default function Mac() {
         </div>
 
         {/* VIDEO (NOW BELOW TEXT) */}
-        <div className="flex justify-center">
-          <video
-            ref={videoRef}
-            src="/videos/hero.mp4"
-            autoPlay
-            muted
-            playsInline
-            className="w-[80%] max-w-4xl rounded-xl border border-[#0088ff]/30 shadow-[0_0_30px_rgba(0,136,255,0.25)]"
-          />
-        </div>
+    <div className="flex justify-center overflow-hidden">
+  <div className="w-[90%] max-w-4xl rounded-xl border border-[#0088ff]/30 shadow-[0_0_30px_rgba(0,136,255,0.25)] overflow-hidden">
+    
+    <video
+      ref={videoRef}
+      src="/videos/hero.mp4"
+      autoPlay
+      muted
+      playsInline
+      className="w-full h-full object-cover scale-125"
+    />
+    
+  </div>
+</div>
   {/* Scroll hint */}
         <div className="mt-10 flex flex-col items-center gap-2 text-text-subtle animate-bounce">
           <span className="text-xs tracking-widest uppercase">Scroll</span>
